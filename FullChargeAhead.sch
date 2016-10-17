@@ -39,7 +39,7 @@ Title ""
 Date ""
 Rev ""
 Comp ""
-Comment1 "Note 1: R107 must be sized to match max charge rate of battery. 38.3K = 110mA at 4.2V"
+Comment1 "Note 1: R108 must be sized to match max charge rate of battery. 8.2K = 122mA at 4.2V"
 Comment2 "Note 2: Verify polarity of connection P103 matches polarity of battery connector"
 Comment3 ""
 Comment4 ""
@@ -52,7 +52,7 @@ F 0 "U101" H 5500 3050 60  0000 C CNN
 F 1 "MCP73834" H 5500 3650 60  0000 C CNN
 F 2 "Housings_SSOP:MSOP-10_3x3mm_Pitch0.5mm" H 5500 3350 60  0001 C CNN
 F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/22005b.pdf" H 5500 3350 60  0001 C CNN
-F 4 "Value" H 5500 3350 60  0001 C CNN "Fieldname"
+F 4 "http://ww1.microchip.com/downloads/en/DeviceDoc/22005b.pdf" H 5500 3350 60  0001 C CNN "Datasheet"
 F 5 "MCP73834-FCI/UN" H 5500 3350 60  0001 C CNN "MPN"
 	1    5500 3350
 	1    0    0    -1  
@@ -62,7 +62,7 @@ L R R108
 U 1 1 57DAA130
 P 6400 3600
 F 0 "R108" V 6480 3600 50  0000 C CNN
-F 1 "38.3R" V 6400 3600 39  0000 C CNN
+F 1 "8.2K" V 6400 3600 39  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 6330 3600 50  0001 C CNN
 F 3 "" H 6400 3600 50  0000 C CNN
 F 4 "Value" H 6400 3600 60  0001 C CNN "Fieldname"
@@ -89,7 +89,7 @@ L R R105
 U 1 1 57DAA2E1
 P 4700 3450
 F 0 "R105" V 4780 3450 50  0000 C CNN
-F 1 "470" V 4700 3450 50  0000 C CNN
+F 1 "430" V 4700 3450 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 4630 3450 50  0001 C CNN
 F 3 "" H 4700 3450 50  0000 C CNN
 	1    4700 3450
@@ -102,7 +102,7 @@ L R R104
 U 1 1 57DAA312
 P 4700 3250
 F 0 "R104" V 4780 3250 50  0000 C CNN
-F 1 "470" V 4700 3250 50  0000 C CNN
+F 1 "430" V 4700 3250 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 4630 3250 50  0001 C CNN
 F 3 "" H 4700 3250 50  0000 C CNN
 	1    4700 3250
@@ -116,7 +116,7 @@ U 1 1 57DAA4B0
 P 7350 3450
 F 0 "C102" H 7375 3550 50  0000 L CNN
 F 1 "4.7U" H 7375 3350 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 7388 3300 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7388 3300 50  0001 C CNN
 F 3 "" H 7350 3450 50  0000 C CNN
 	1    7350 3450
 	1    0    0    -1  
@@ -166,9 +166,10 @@ L LED D102
 U 1 1 57DAA6C5
 P 4100 3450
 F 0 "D102" H 4100 3550 50  0000 C CNN
-F 1 "LED" H 4100 3350 50  0000 C CNN
+F 1 "GREEN" H 4100 3350 50  0000 C CNN
 F 2 "LEDs:LED_0805" H 4100 3450 50  0001 C CNN
 F 3 "" H 4100 3450 50  0000 C CNN
+F 4 "LTST-C171GKT" H 4100 3450 60  0001 C CNN "MPN"
 	1    4100 3450
 	-1   0    0    1   
 $EndComp
@@ -177,9 +178,10 @@ L LED D101
 U 1 1 57DAA6FA
 P 4100 3150
 F 0 "D101" H 4100 3250 50  0000 C CNN
-F 1 "LED" H 4100 3050 50  0000 C CNN
+F 1 "YELLOW" H 4100 3050 50  0000 C CNN
 F 2 "LEDs:LED_0805" H 4100 3150 50  0001 C CNN
 F 3 "" H 4100 3150 50  0000 C CNN
+F 4 "LTST-C171KSKT" H 4100 3150 60  0001 C CNN "MPN"
 	1    4100 3150
 	-1   0    0    1   
 $EndComp
@@ -210,7 +212,7 @@ U 1 1 57DAAA1B
 P 3450 3150
 F 0 "C101" H 3475 3250 50  0000 L CNN
 F 1 "4.7U" H 3475 3050 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 3488 3000 50  0001 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3488 3000 50  0001 C CNN
 F 3 "" H 3450 3150 50  0000 C CNN
 	1    3450 3150
 	1    0    0    -1  
@@ -234,8 +236,7 @@ F 0 "P101" V 3300 2650 50  0000 C CNN
 F 1 "USB_OTG" H 3000 2900 50  0000 C CNN
 F 2 "FullChargeAhead:USB_Micro-B_10103594-0001LF" V 2950 2600 50  0001 C CNN
 F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10103594.pdf" V 2950 2600 50  0001 C CNN
-F 4 "Value" H 3000 2700 60  0001 C CNN "Fieldname"
-F 5 "10103594-0001LF" H 3000 2700 60  0001 C CNN "MPN"
+F 4 "10103594-0001LF" H 3000 2700 60  0001 C CNN "MPN"
 	1    3000 2700
 	0    -1   -1   0   
 $EndComp
@@ -335,10 +336,10 @@ L CONN_01X02 P102
 U 1 1 57DB443B
 P 4300 3850
 F 0 "P102" H 4300 4000 50  0000 C CNN
-F 1 "CONN_01X02" V 4450 3850 50  0000 C CNN
+F 1 "CONN_01X02" V 4450 3720 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 4300 3850 50  0001 C CNN
-F 3 "http://www.jst-mfg.com/product/pdf/eng/ePH.pdf" H 4300 3850 50  0001 C CNN
-F 4 "S2B-PH-K-S(LF)(SN)" H 4300 3850 60  0001 C CNN "MPN"
+F 3 "" H 4300 3850 50  0001 C CNN
+F 4 "Value" H 4300 3850 60  0001 C CNN "Fieldname"
 	1    4300 3850
 	-1   0    0    -1  
 $EndComp
@@ -394,7 +395,7 @@ U 1 1 57DAA1D4
 P 6950 3700
 F 0 "R110" V 7030 3700 50  0000 C CNN
 F 1 "10K" V 6950 3700 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805_HandSoldering" V 6880 3700 50  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 6880 3700 50  0001 C CNN
 F 3 "" H 6950 3700 50  0000 C CNN
 	1    6950 3700
 	-1   0    0    1   
@@ -403,47 +404,24 @@ Wire Wire Line
 	6000 3350 6950 3350
 Wire Wire Line
 	6950 3350 6950 3550
-$Comp
-L CONN_01X02 P104
-U 1 1 57E203B6
-P 7900 2800
-F 0 "P104" H 7900 2950 50  0000 C CNN
-F 1 "CONN_01X02" V 8000 2800 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 7900 2800 50  0001 C CNN
-F 3 "" H 7900 2800 50  0000 C CNN
-	1    7900 2800
-	0    -1   -1   0   
-$EndComp
-$Comp
-L CONN_01X02 P105
-U 1 1 57E20401
-P 7900 3450
-F 0 "P105" H 7900 3600 50  0000 C CNN
-F 1 "CONN_01X02" V 8000 3450 50  0000 C CNN
-F 2 "FullChargeAhead:Terminal_Block_200_mil" H 7900 3450 50  0001 C CNN
-F 3 "" H 7900 3450 50  0000 C CNN
-F 4 "OSTTC022162" H 7900 3450 60  0001 C CNN "MPN"
-	1    7900 3450
-	0    1    1    0   
-$EndComp
 Wire Wire Line
-	6000 3150 7850 3150
-Wire Wire Line
-	7850 3000 7850 3250
+	6000 3150 8350 3150
 Wire Wire Line
 	7350 3300 7350 3150
 Connection ~ 7350 3150
 Wire Wire Line
 	6200 3250 6200 3150
 Connection ~ 6200 3150
-Connection ~ 7850 3150
-Wire Wire Line
-	7950 3000 7950 3250
-Wire Wire Line
-	8350 3150 7950 3150
-Connection ~ 7950 3150
 Text Label 6600 3150 0    60   ~ 0
 Vbat
 Text Label 8100 3150 0    60   ~ 0
 Vbat2
+Text Notes 5070 2640 0    60   ~ 0
+R104 and R105 are flexible
+Text Notes 7130 4050 0    60   ~ 0
+Change R110 to through hole
+Text Notes 8850 3250 0    60   ~ 0
+Verify connector polarity.
+Text Notes 6360 4270 0    60   ~ 0
+6.7K Minimum for 1C=150mAh
 $EndSCHEMATC
