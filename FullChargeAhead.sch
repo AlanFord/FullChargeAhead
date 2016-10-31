@@ -234,9 +234,10 @@ U 1 1 57DAAD1C
 P 3000 2700
 F 0 "P101" V 3300 2650 50  0000 C CNN
 F 1 "USB_OTG" H 3000 2900 50  0000 C CNN
-F 2 "FullChargeAhead:USB_Micro-B_10103594-0001LF" V 2950 2600 50  0001 C CNN
-F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10103594.pdf" V 2950 2600 50  0001 C CNN
-F 4 "10103594-0001LF" H 3000 2700 60  0001 C CNN "MPN"
+F 2 "FullChargeAhead:10118193" V 2950 2600 50  0001 C CNN
+F 3 "http://portal.fciconnect.com/Comergent//fci/drawing/10118193.pdf" V 2950 2600 50  0001 C CNN
+F 4 "Value" H 3000 2700 60  0001 C CNN "Fieldname"
+F 5 "10118193-0001LF" H 3000 2700 60  0001 C CNN "MPN"
 	1    3000 2700
 	0    -1   -1   0   
 $EndComp
@@ -355,7 +356,7 @@ F 3 "" H 4500 4000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5000 3550 5000 3800
+	5000 3550 5000 4170
 Wire Wire Line
 	5000 3800 4900 3800
 Wire Wire Line
@@ -416,12 +417,54 @@ Text Label 6600 3150 0    60   ~ 0
 Vbat
 Text Label 8100 3150 0    60   ~ 0
 Vbat2
-Text Notes 5070 2640 0    60   ~ 0
-R104 and R105 are flexible
+Text Notes 3260 4510 0    60   ~ 0
+Size R104 and R105 for <20 mA and specific LED Vf
 Text Notes 7130 4050 0    60   ~ 0
-Change R110 to through hole
+R110 should be through hole, suggest 10 mm lead spacing
 Text Notes 8850 3250 0    60   ~ 0
 Verify connector polarity.
-Text Notes 6360 4270 0    60   ~ 0
-6.7K Minimum for 1C=150mAh
+Text Notes 6310 4410 0    60   ~ 0
+6.7K Minimum for 1C=150mAh\n8.2K = 122 mA charge rate
+$Comp
+L TEST_1P W102
+U 1 1 5807C88C
+P 7840 3010
+F 0 "W102" H 7840 3280 50  0000 C CNN
+F 1 "TEST_1P" H 7840 3210 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 8040 3010 50  0001 C CNN
+F 3 "" H 8040 3010 50  0000 C CNN
+	1    7840 3010
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7840 3010 7840 3150
+Connection ~ 7840 3150
+$Comp
+L TEST_1P W101
+U 1 1 5807CB7C
+P 4970 2730
+F 0 "W101" H 4970 3000 50  0000 C CNN
+F 1 "TEST_1P" H 4970 2930 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5170 2730 50  0001 C CNN
+F 3 "" H 5170 2730 50  0000 C CNN
+	1    4970 2730
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4970 2730 4970 2900
+Connection ~ 4970 2900
+$Comp
+L TEST_1P W103
+U 1 1 580DFE0E
+P 5230 4170
+F 0 "W103" H 5230 4440 50  0000 C CNN
+F 1 "TEST_1P" H 5230 4370 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5430 4170 50  0001 C CNN
+F 3 "" H 5430 4170 50  0000 C CNN
+	1    5230 4170
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4170 5230 4170
+Connection ~ 5000 3800
 $EndSCHEMATC
